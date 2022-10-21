@@ -19,7 +19,9 @@ while (have_posts()) {
         <div class="metabox metabox--position-up metabox--with-home-link">
             <?php
             $theParent = wp_get_post_parent_id(get_the_ID());
-
+            echo get_the_ID();
+            echo "<br>";
+            echo $theParent;
             if ($theParent) 
 
                 { ?>
@@ -34,7 +36,7 @@ while (have_posts()) {
             ?>
         </div>
 
-        <!--
+    
       <div class="page-links">
         <h2 class="page-links__title"><a href="#">About Us</a></h2>
         <ul class="min-list">
@@ -42,7 +44,7 @@ while (have_posts()) {
           <li><a href="#">Our Goals</a></li>
         </ul>
       </div>
-    -->
+   
 
         <div class="generic-content">
             <?php the_content() ?>
